@@ -1,0 +1,6 @@
+@PointList.API_HostAddress = http://localhost:5264
+
+GET {{PointList.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
