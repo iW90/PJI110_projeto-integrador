@@ -160,6 +160,10 @@ namespace Lista_de_Pontos.Entities
             foreach (Instrumento instrumento in Instrumentos)
             {
                 int portas = instrumento.SumPortas();
+                EntradaAnalógica += instrumento.EntradaAnalógica;
+                SaidaAnalógica += instrumento.SaidaAnalógica;
+                EntradaDigital += instrumento.EntradaDigital;
+                SaidaDigital += instrumento.SaidaDigital;
                 sum += portas;
             }
             return sum;
@@ -172,7 +176,8 @@ namespace Lista_de_Pontos.Entities
             {
                 instrumentosString += $"\n{instrumento}";
             }
-            return $"{Nome}\n{instrumentosString}";
+            int somPortas = SumPortas();
+            return $"{Nome}\n{instrumentosString}\nTotal: {somPortas} - EA {EntradaAnalógica}, SA {SaidaAnalógica}, ED {EntradaDigital}, SD {SaidaDigital}";
         }
     }
 }

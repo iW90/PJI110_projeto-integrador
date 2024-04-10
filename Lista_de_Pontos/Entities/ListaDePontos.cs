@@ -6,11 +6,15 @@ namespace Lista_de_Pontos.Entities
 {
     internal class ListaDePontos
     {
-        public int IdListPon { get; set; }
-        public string Client { get; set; }
-        public List<Disciplina> Disciplinas { get; set; }
-        public List<string> Pavimentos { get; set; }
-        public List<Equipamento> Equipamentos { get; set; }
+        public int IdListPon { get; protected set; }
+        public string Client { get; protected set; }
+        public List<Disciplina> Disciplinas { get; protected set; }
+        public List<string> Pavimentos { get; protected set; }
+        public List<Equipamento> Equipamentos { get; protected set; }
+        public int EntradaAnalógica { get; protected set; }
+        public int SaidaAnalógica { get; protected set; }
+        public int EntradaDigital { get; protected set; }
+        public int SaidaDigital { get; protected set; }
 
         public ListaDePontos(int idListPon, string client, List<Disciplina> disciplinas, List<string> pavimentos)
         {
@@ -54,6 +58,15 @@ namespace Lista_de_Pontos.Entities
                     if ((Disciplina)escDisc == disc)
                     {
                         disciplina = (Disciplina)escDisc;
+                    }
+                    else if (escDisc >= 0 && escDisc <= 2 && Disciplinas.Count == 1)
+                    {
+                        disciplina = Disciplinas[0];
+                        Console.WriteLine($"Disciplina: {disciplina}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Disciplina não encontrada, atribuída {(Disciplina)escDisc}");
                     }
                 }
 
@@ -236,6 +249,20 @@ namespace Lista_de_Pontos.Entities
             }
         }
 
+        public int SumPortas()
+        {
+            int sum = 0;
+            foreach (Equipamento equipamento in Equipamentos)
+            {
+                sum += equipamento.SumPortas();
+                EntradaAnalógica += equipamento.EntradaAnalógica;
+                SaidaAnalógica += equipamento.SaidaAnalógica;
+                EntradaDigital += equipamento.EntradaDigital;
+                SaidaDigital += equipamento.SaidaDigital;
+            }
+            return sum;
+        }
+
         public void ShowLista()
         {
             Console.WriteLine($"Lista de Pontos #{IdListPon}"
@@ -260,6 +287,8 @@ namespace Lista_de_Pontos.Entities
                     }
                 }
             }
+            int total = SumPortas();
+            Console.WriteLine($"Total: {total} EA {EntradaAnalógica} SA {SaidaAnalógica} ED {EntradaDigital} SD {SaidaDigital}");
         }
     }
 }

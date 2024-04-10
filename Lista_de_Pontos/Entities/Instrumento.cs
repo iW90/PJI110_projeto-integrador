@@ -108,7 +108,7 @@ namespace Lista_de_Pontos.Entities
 
         public override string ToString()
         {
-            return $"#{IdInstr}. {Descricao} - Entrada Analógica: {EntradaAnalógica}, Saída Analógica: {SaidaAnalógica}, Entrada Digital: {EntradaDigital}, Saída Digital: {SaidaDigital} - {Nome} - Em estoque: {Qtd}";
+            return $"#{IdInstr}. {Descricao} - EA {EntradaAnalógica}, SA {SaidaAnalógica}, ED {EntradaDigital}, SD {SaidaDigital} - {Nome} - Quantidade: {Qtd}";
         }
     }
 }
