@@ -114,9 +114,6 @@ hr {
 
 
 /* Menu */
-nav {
-}
-
 nav ul {
 	text-transform: uppercase;
 	display: flex;
@@ -127,7 +124,7 @@ nav ul {
 }
 
 nav ul li {
-	width: 100px;
+	width: 200px;
 	text-align: center;
 }
 

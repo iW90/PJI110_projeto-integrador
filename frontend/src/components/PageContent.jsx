@@ -9,7 +9,7 @@ function	PageContent({ pagina }) {
 	if (pagina === 'home') {
 	  return <HomePage />;
 	} else if (pagina === 'calc') {
-	  return <CalculatorPage />;
+	  return <PointListPage />;
 	} else if (pagina === 'mngt') {
 	  return <ManagementPage />;
 	} else if (pagina === 'srch') {
