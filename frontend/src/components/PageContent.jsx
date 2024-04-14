@@ -1,6 +1,8 @@
 import React from 'react';
 import HomePage from '../pages/HomePage';
-import CalculatorPage from '../pages/CalculatorPage';
+import CalculatorPage from '../pages/CalculatorPage/CalculatorPage';
+import ManagementPage from '../pages/ManagementPage/ManagementPage';
+import SearchPage from '../pages/SearchPage/SearchPage'
 
 // Componente de Conteúdo
 function	PageContent({ pagina }) {
@@ -8,17 +10,13 @@ function	PageContent({ pagina }) {
 	  return <HomePage />;
 	} else if (pagina === 'calc') {
 	  return <CalculatorPage />;
+	} else if (pagina === 'mngt') {
+	  return <ManagementPage />;
+	} else if (pagina === 'srch') {
+	return <SearchPage />;
 	} else {
 		return null;
 	}
-
-
-	// } else if (pagina === 'mngt') {
-	//   return <ManagementPage />;
-	// } else if (pagina === 'srch') {
-	//   return <SearchPage />;
-	// }
-  
 }
 
 export default PageContent;

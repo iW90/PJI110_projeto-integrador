@@ -1,45 +1,54 @@
-import React from 'react';
-import AddDeviceForm from './AddDeviceForm';
-import DeleteDeviceForm from './DeleteDeviceForm';
-import UpdateDeviceForm from './UpdateDeviceForm';
+import React, { useState } from 'react';
+import AddInstrument from './AddInstrument';
+import DelInstrument from './DelInstrument';
+import AltInstrument from './AltInstrument';
+import AddEquipment from './AddEquipment';
+import DelEquipment from './DelEquipment';
+import AltEquipment from './AltEquipment';
 
-function	ManagementPage() {
-	const [selectedAction, setSelectedAction] = useState('');
+// Componente de Conteúdo
+function ManagementContent({ selectedAction }) {
+	switch (selectedAction) {
+		case 'addItmto':
+			return <AddInstrument />;
+		case 'delItmto':
+			return <DelInstrument />;
+		case 'altItmto':
+			return <AltInstrument />;
+		case 'addEqmto':
+			return <AddEquipment />;
+		case 'delEqmto':
+			return <DelEquipment />;
+		case 'altEqmto':
+			return <AltEquipment />;
+		default:
+			return null;
+	}
+}
+
+function ManagementPage() {
+	const [selectAction, setSelectAction] = useState('');
 
 	const handleActionChange = (e) => {
-		setSelectedAction(e.target.value);
+		setSelectAction(e.target.value);
 	};
-
-	let component;
-
-	switch (selectedAction) {
-	case 'register':
-		component = <AddDeviceForm />;
-		break;
-	case 'delete':
-		component = <DeleteDeviceForm />;
-		break;
-	case 'change':
-		component = <UpdateDeviceForm />;
-		break;
-	default:
-		component = null;
-	}
 
 	return (
 		<div>
-
-			<label htmlFor="managementDeviceActions">
-				Selecione a ação desejada:
-				<select id="managementDeviceActions" name="managementDeviceActions" onChange={handleActionChange}>
+			<label htmlFor="managementActions">
+				<p>Selecione a ação desejada: </p>
+				<select id="managementActions" name="managementActions" onChange={handleActionChange}>
 					<option value="" disabled selected>Default</option>
-					<option value="register">Cadastrar</option>
-					<option value="delete">Excluir</option>
-					<option value="change">Alterar</option>
+					<option value="addItmto">Cadastrar Instrumento</option>
+					<option value="delItmto">Excluir Instrumento</option>
+					<option value="altItmto">Alterar Instrumento</option>
+					<option value="addEqmto">Cadastrar Equipamento</option>
+					<option value="delEqmto">Excluir Equipamento</option>
+					<option value="altEqmto">Alterar Equipamento</option>
 				</select>
 			</label>
 
-			{component}
+			<ManagementContent selectedAction={selectAction} />
 		</div>
 	);
 }
