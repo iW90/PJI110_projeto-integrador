@@ -1,20 +1,26 @@
 import React, { useState } from 'react';
-import InstrumentByName from './InstrumentByName';
 import InstrumentById from './InstrumentById';
-import EquipmentByName from './EquipmentByName';
+import InstrumentByName from './InstrumentByName';
+import InstrumentListAll from './InstrumentListAll';
 import EquipmentById from './EquipmentById';
+import EquipmentByName from './EquipmentByName';
+import EquipmentListAll from './EquipmentListAll';
 
 // Componente de Conteúdo
 function SearchContent({ selectedAction }) {
 	switch (selectedAction) {
-		case 'srchInstName':
-			return <InstrumentByName />;
-		case 'srchEqtoName':
-			return <InstrumentById />;
-		case 'srchInstId':
-			return <EquipmentByName />;
 		case 'srchEqtoId':
 			return <EquipmentById />;
+		case 'srchEqtoName':
+			return <InstrumentById />;
+		case 'listAllEqto':
+			return <EquipmentListAll />;
+		case 'srchInstId':
+			return <EquipmentByName />;
+		case 'srchInstName':
+			return <InstrumentByName />;
+		case 'listAllInst':
+			return <InstrumentListAll />;
 		default:
 			return null;
 	}
@@ -33,10 +39,12 @@ function SearchPage() {
 				<p>Selecione o tipo de busca desejada: </p>
 				<select id="managementActions" name="managementActions" onChange={handleActionChange}>
 					<option value="" disabled selected>Default</option>
-					<option value="srchInstName">Buscar Instrumento pelo nome</option>
-					<option value="srchEqtoName">Buscar Equipamento pelo nome</option>
 					<option value="srchInstId">Buscar Instrumento pelo id</option>
 					<option value="srchEqtoId">Buscar Equipamento pelo id</option>
+					<option value="srchInstName">Buscar Instrumentos pelo nome</option>
+					<option value="srchEqtoName">Buscar Equipamentos pelo nome</option>
+					<option value="listAllInst">Buscar Lista de Instrumentos</option>
+					<option value="listAllEqto">Buscar Lista de Equipamentos</option>
 				</select>
 			</label>
 
