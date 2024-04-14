@@ -7,7 +7,7 @@ function Modal({ open, children, onClose }) {
 		<div className="modal">
 			<div className="modal-content">
 				{children}
-				<button onClick={onClose}>Fechar</button>
+				<button onClick={onClose}> x </button>
 			</div>
 		</div>
 	);

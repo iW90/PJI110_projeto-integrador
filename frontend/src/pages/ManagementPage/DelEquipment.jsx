@@ -7,9 +7,9 @@ const DelEquipment = () => {
 		<form method="DEL" action="/deletar-equipamento">
 			<h2>Remoção de Equipamento Cadastrado</h2>
 
-			<Input id="deviceId" type="text" text="Id:" />
+			<Input id="eqtoId" type="text" text="Id do Equipamento: " />
 
-			<Button id="addDevice" text="Deletar Equipamento" action="algumaFunction()"/>
+			<Button id="delEqto" text="Deletar Equipamento" action="algumaFunction()"/>
 		</form>
 	);
 }

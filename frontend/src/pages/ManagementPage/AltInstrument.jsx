@@ -7,15 +7,14 @@ const AltInstrument = () => {
 		<form method="PUT" action="/alterar-instrumento">
 			<h2>Alteração de Instrumento Cadastrado</h2>
 
-			<Input id="deviceId" type="text" text="Id:" />
-			<Input id="deviceName" type="text" text="Nome:" />
-			<Input id="deviceDescription" type="text" text="Descrição:" />
-			<Input id="deviceAI" type="text" text="Quantidade de Entradas Analógicas:" />
-			<Input id="deviceAO" type="text" text="Quantidade de Saídas Analógicas:" />
-			<Input id="deviceDI" type="text" text="Quantidade de Entradas Digitais:" />
-			<Input id="deviceDO" type="text" text="Quantidade de Saídas Digitais:" />
+			<Input id="istoId" type="text" text="Id:" />
+			<Input id="istoName" type="text" text="Nome:" />
+			<Input id="istoAI" type="text" text="Quantidade de Entradas Analógicas:" />
+			<Input id="istoAO" type="text" text="Quantidade de Saídas Analógicas:" />
+			<Input id="istoDI" type="text" text="Quantidade de Entradas Digitais:" />
+			<Input id="istoDO" type="text" text="Quantidade de Saídas Digitais:" />
 
-			<Button id="addDevice" text="Alterar Instrumento" action="algumaFunction()"/>
+			<Button id="altIsto" text="Alterar Instrumento" action="algumaFunction()"/>
 		</form>
 	);
 }

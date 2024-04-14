@@ -6,7 +6,7 @@ const InstrumentListAll = () => {
 		<form method="GET" action="/buscar-instrumentos">
 			<h2>Lista todos os Instrumentos Cadastrados</h2>
 
-			<Button id="addDevice" text="Buscar Instrumentos" action="algumaFunction()"/>
+			<Button id="getAllIsto" text="Buscar Instrumentos" action="algumaFunction()"/>
 		</form>
 	);
 }

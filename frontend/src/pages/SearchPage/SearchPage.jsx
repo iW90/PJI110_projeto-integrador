@@ -38,7 +38,7 @@ function SearchPage() {
 			<label htmlFor="managementActions">
 				<p>Selecione o tipo de busca desejada: </p>
 				<select id="managementActions" name="managementActions" onChange={handleActionChange}>
-					<option value="" disabled selected>Default</option>
+					<option value="" disabled selected>Selecione uma opção</option>
 					<option value="srchInstId">Buscar Instrumento pelo id</option>
 					<option value="srchEqtoId">Buscar Equipamento pelo id</option>
 					<option value="srchInstName">Buscar Instrumentos pelo nome</option>

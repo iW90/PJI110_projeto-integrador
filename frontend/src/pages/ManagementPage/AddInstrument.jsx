@@ -7,14 +7,13 @@ const AddInstrument = () => {
 		<form method="POST" action="/adicionar-instrumento">
 			<h2>Cadastro de Novo Instrumento</h2>
 
-			<Input id="deviceName" type="text" text="Nome:" />
-			<Input id="deviceDescription" type="text" text="Descrição:" />
-			<Input id="deviceAI" type="text" text="Quantidade de Entradas Analógicas:" />
-			<Input id="deviceAO" type="text" text="Quantidade de Saídas Analógicas:" />
-			<Input id="deviceDI" type="text" text="Quantidade de Entradas Digitais:" />
-			<Input id="deviceDO" type="text" text="Quantidade de Saídas Digitais:" />
+			<Input id="istoName" type="text" text="Nome:" />
+			<Input id="istoAI" type="text" text="Quantidade de Entradas Analógicas:" />
+			<Input id="istoAO" type="text" text="Quantidade de Saídas Analógicas:" />
+			<Input id="istoDI" type="text" text="Quantidade de Entradas Digitais:" />
+			<Input id="istoDO" type="text" text="Quantidade de Saídas Digitais:" />
 
-			<Button id="addDevice" text="Cadastrar Instrumento" action="algumaFunction()"/>
+			<Button id="addIsto" text="Cadastrar Instrumento" action="algumaFunction()"/>
 		</form>
 	);
 }

@@ -7,14 +7,10 @@ const AddEquipment = () => {
 		<form method="POST" action="/adicionar-equipamento">
 			<h2>Cadastro de Novo Equipamento</h2>
 
-			<Input id="deviceName" type="text" text="Nome:" />
-			<Input id="deviceDescription" type="text" text="Descrição:" />
-			<Input id="deviceAI" type="text" text="Quantidade de Entradas Analógicas:" />
-			<Input id="deviceAO" type="text" text="Quantidade de Saídas Analógicas:" />
-			<Input id="deviceDI" type="text" text="Quantidade de Entradas Digitais:" />
-			<Input id="deviceDO" type="text" text="Quantidade de Saídas Digitais:" />
+			<Input id="eqtoName" type="text" text="Nome:" />
+			<Input id="eqtoDescription" type="text" text="Descrição:" />
 
-			<Button id="addDevice" text="Cadastrar Equipamento" action="algumaFunction()"/>
+			<Button id="addEqto" text="Cadastrar Equipamento" action="algumaFunction()"/>
 		</form>
 	);
 }

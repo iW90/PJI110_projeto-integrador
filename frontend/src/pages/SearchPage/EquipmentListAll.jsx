@@ -6,7 +6,7 @@ const EquipmentListAll = () => {
 		<form method="GET" action="/buscar-equipamentos">
 			<h2>Lista todos os Equipamentos Cadastrados</h2>
 
-			<Button id="addDevice" text="Buscar Equipamentos" action="algumaFunction()"/>
+			<Button id="getAllEqto" text="Buscar Equipamentos" action="algumaFunction()"/>
 		</form>
 	);
 }

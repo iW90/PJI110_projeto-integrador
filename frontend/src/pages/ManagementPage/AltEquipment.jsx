@@ -7,15 +7,11 @@ const AltEquipment = () => {
 		<form method="PUT" action="/alterar-equipamento">
 			<h2>Alteração de Equipamento Cadastrado</h2>
 
-			<Input id="deviceId" type="text" text="Id:" />
-			<Input id="deviceName" type="text" text="Nome:" />
-			<Input id="deviceDescription" type="text" text="Descrição:" />
-			<Input id="deviceAI" type="text" text="Quantidade de Entradas Analógicas:" />
-			<Input id="deviceAO" type="text" text="Quantidade de Saídas Analógicas:" />
-			<Input id="deviceDI" type="text" text="Quantidade de Entradas Digitais:" />
-			<Input id="deviceDO" type="text" text="Quantidade de Saídas Digitais:" />
+			<Input id="eqtoId" type="text" text="Id:" />
+			<Input id="eqtoName" type="text" text="Nome:" />
+			<Input id="eqtoDescription" type="text" text="Descrição:" />
 
-			<Button id="addDevice" text="Alterar Equipamento" action="algumaFunction()"/>
+			<Button id="altEqto" text="Alterar Equipamento" action="algumaFunction()"/>
 		</form>
 	);
 }

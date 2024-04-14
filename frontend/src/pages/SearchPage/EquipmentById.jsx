@@ -7,9 +7,9 @@ const EquipmentById = () => {
 		<form method="GET" action="/buscar-equipamento-id">
 			<h2>Busca de Equipamento pelo ID</h2>
 
-			<Input id="deviceId" type="text" text="Id do Equipamento:" />
+			<Input id="getEqtoId" type="text" text="Id do Equipamento: " />
 
-			<Button id="addDevice" text="Buscar Equipamento" action="algumaFunction()"/>
+			<Button id="getEqtoId" text="Buscar Equipamento" action="algumaFunction()"/>
 		</form>
 	);
 }

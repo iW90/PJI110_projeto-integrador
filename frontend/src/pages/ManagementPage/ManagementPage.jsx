@@ -38,7 +38,7 @@ function ManagementPage() {
 			<label htmlFor="managementActions">
 				<p>Selecione a ação desejada: </p>
 				<select id="managementActions" name="managementActions" onChange={handleActionChange}>
-					<option value="" disabled selected>Default</option>
+					<option value="" disabled selected>Selecione uma opção</option>
 					<option value="addItmto">Cadastrar Instrumento</option>
 					<option value="delItmto">Excluir Instrumento</option>
 					<option value="altItmto">Alterar Instrumento</option>

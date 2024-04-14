@@ -1,6 +1,6 @@
 import React from 'react';
 import HomePage from '../pages/HomePage';
-import CalculatorPage from '../pages/CalculatorPage/CalculatorPage';
+import PointListPage from '../pages/PointListPage/PointListPage';
 import ManagementPage from '../pages/ManagementPage/ManagementPage';
 import SearchPage from '../pages/SearchPage/SearchPage'
 
