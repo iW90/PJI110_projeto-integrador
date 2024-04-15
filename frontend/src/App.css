@@ -197,18 +197,18 @@ button:focus-visible {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0 5%;
 	gap: 5%;
 }
 
 #home-section main {
 	flex: 0 0 60%; /* flex-grow: 0, flex-shrink: 0, flex-basis: 75% */
-	max-width: 60%;
+	max-width: 40%;
 	text-align: justify;
 }
 
 #home-section aside {
-	flex: 0 0 20%; /* flex-grow: 0, flex-shrink: 0, flex-basis: 20% */
+	flex: 0 0 40%; /* flex-grow: 0, flex-shrink: 0, flex-basis: 20% */
+	max-width: 30%;
 	text-align: left;
 }
 

@@ -9,7 +9,7 @@ function	HomePage() {
 				<p>Univesp 2024.</p>
 			</main>
 			<aside>
-				<h4>Alunos envolvidos:</h4>
+				<h4>Grupo Desenvolvedor:</h4>
 				<p>Alexandre de Morais S. L. de Oliveira</p>
 				<p>Ingrid Wagner</p>
 				<p>Igor Dalton Maturano</p>
@@ -18,9 +18,9 @@ function	HomePage() {
 				<p>Roseli Gomes da Silva</p>
 				<p>Silvia Cristina Monteiro Moraes</p>
 				<p>Thiago José Nascimento Versiani</p>
-				<br></br>
+				{/* <br></br>
 				<h4>Sob orientação de:</h4>
-				<p>Tamires A. Costa Silva de Souza</p>
+				<p>Tamires A. Costa Silva de Souza</p> */}
 			</aside>
 		</section>
 	);
