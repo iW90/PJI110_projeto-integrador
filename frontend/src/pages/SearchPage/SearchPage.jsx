@@ -34,7 +34,7 @@ function SearchPage() {
 	};
 
 	return (
-		<div>
+		<section id="search-section">
 			<label htmlFor="managementActions">
 				<p>Selecione o tipo de busca desejada: </p>
 				<select id="managementActions" name="managementActions" onChange={handleActionChange}>
@@ -49,7 +49,7 @@ function SearchPage() {
 			</label>
 
 			<SearchContent selectedAction={selectAction} />
-		</div>
+		</section>
 	);
 }
 

@@ -34,7 +34,7 @@ function ManagementPage() {
 	};
 
 	return (
-		<div>
+		<section id="management-section">
 			<label htmlFor="managementActions">
 				<p>Selecione a ação desejada: </p>
 				<select id="managementActions" name="managementActions" onChange={handleActionChange}>
@@ -49,7 +49,7 @@ function ManagementPage() {
 			</label>
 
 			<ManagementContent selectedAction={selectAction} />
-		</div>
+		</section>
 	);
 }
 
