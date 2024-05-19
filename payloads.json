@@ -1,0 +1,77 @@
+{
+	"nome_cliente": "Nome_da_Pessoa",
+	"pavimentos": [
+		{
+			"nome_pavimento": "Pav_1",
+			"equipamentos": [
+				{
+					"nome_equipamento": "Equip_1",
+					"disciplina": 0,
+					"instrumentos": [
+						{
+							"nome_instrumento": "Instr_1",
+							"descricao": "Descrição do instrumento",
+							"ea": 0,
+							"ed": 0,
+							"sa": 0,
+							"sd": 0,
+							"quantidade": 0
+						}
+					]
+				}
+			],
+			"total_ea_equip": 0,
+			"total_ed_equip": 0,
+			"total_sa_equip": 0,
+			"total_sd_equip": 0
+		},
+		{
+			"nome_pavimento": "Pav_1",
+			"equipamentos": [
+				{
+					"nome_equipamento": "Equip_1",
+					"disciplina": 1,
+					"instrumentos": [
+						{
+							"nome_instrumento": "Instr_1",
+							"descricao": "Descrição do instrumento",
+							"ea": 0,
+							"ed": 0,
+							"sa": 0,
+							"sd": 0,
+							"quantidade": 0
+						}
+					]
+				}
+			],
+			"total_ea_equip": 0,
+			"total_ed_equip": 0,
+			"total_sa_equip": 0,
+			"total_sd_equip": 0
+		},
+		{
+			"nome_pavimento": "Pav_1",
+			"equipamentos": [
+				{
+					"nome_equipamento": "Equip_1",
+					"disciplina": 2,
+					"instrumentos": [
+						{
+							"nome_instrumento": "Instr_1",
+							"descricao": "Descrição do instrumento",
+							"ea": 0,
+							"ed": 0,
+							"sa": 0,
+							"sd": 0,
+							"quantidade": 0
+						}
+					]
+				}
+			],
+			"total_ea_equip": 0,
+			"total_ed_equip": 0,
+			"total_sa_equip": 0,
+			"total_sd_equip": 0
+		}
+	]
+}
