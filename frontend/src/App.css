@@ -132,8 +132,5 @@ nav ul li:hover {
 	margin: 0;
 }
 
-/* Pavement */
-.pavement-content {
-	display: flex;
-	gap: 24px;
-}
+
+/* ------------- PointList Page */

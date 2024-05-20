@@ -96,7 +96,7 @@ function PointListPage() {
 			<Button id="addDevice" text="Iniciar Lista" action={handleOpenModalInit} />
 			
 			<ModalInit isVisible={isModalInitVisible} onClose={handleCloseModalInit} onNext={handleNextModalInit} />
-			<ModalFloors isVisible={isModalFloorVisible} numberOfFloors={numberOfFloors} onClose={handleCloseModalFloor} />
+			<ModalFloors isVisible={isModalFloorVisible} numberOfFloors={numberOfFloors} onClose={handleCloseModalFloor} addEqpto={handleOpenModalEquipment} />
 			<ModalEquipment isVisible={isModalEquipmentVisible} onClose={handleCloseModalEquipment} />
 			<ModalInstrument isVisible={isModalInstrumentVisible} onClose={handleCloseModalInstrument} />
 		</section>
