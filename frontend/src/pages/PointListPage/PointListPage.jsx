@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import Button from '../../components/Form/Button';
 import ModalInit from './ModalInit';
 import ModalFloors from './ModalFloors';
+import ModalEquipment from './ModalEquipment';
+import ModalInstrument from './ModalInstrument';
 
 function PointListPage() {
 	const [isModalInitVisible, setModalInitVisible] = useState(false);
 	const [isModalFloorVisible, setModalFloorVisible] = useState(false);
+	const [isModalEquipmentVisible, setModalEquipmentVisible] = useState(false);
+	const [isModalInstrumentVisible, setModalInstrumentVisible] = useState(false);
 	const [numberOfFloors, setNumberOfFloors] = useState(1);
 
 	/* Create Payload to backend */
@@ -60,9 +64,27 @@ function PointListPage() {
 		setModalFloorVisible(true);
 	};
 
-	/* Floors Functions */
+	/* Floors Modal Functions */
 	const handleCloseModalFloor = () => {
 		setModalFloorVisible(false);
+	};
+
+	/* Equipment Modal Functions */
+	const handleOpenModalEquipment = () => {
+		setModalEquipmentVisible(true);
+	};
+
+	const handleCloseModalEquipment = () => {
+		setModalEquipmentVisible(false);
+	};
+
+	/* Instrument Modal Functions */
+	const handleOpenModalInstrument = () => {
+		setModalInstrumentVisible(true);
+	};
+
+	const handleCloseModalInstrument = () => {
+		setModalInstrumentVisible(false);
 	};
 
 	/* Page */
@@ -75,6 +97,8 @@ function PointListPage() {
 			
 			<ModalInit isVisible={isModalInitVisible} onClose={handleCloseModalInit} onNext={handleNextModalInit} />
 			<ModalFloors isVisible={isModalFloorVisible} numberOfFloors={numberOfFloors} onClose={handleCloseModalFloor} />
+			<ModalEquipment isVisible={isModalEquipmentVisible} onClose={handleCloseModalEquipment} />
+			<ModalInstrument isVisible={isModalInstrumentVisible} onClose={handleCloseModalInstrument} />
 		</section>
 	);
 }
