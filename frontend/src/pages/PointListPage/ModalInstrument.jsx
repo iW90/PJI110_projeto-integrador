@@ -12,10 +12,10 @@ function ModalInstrument({ isVisible, onClose }) {
 					<h2>Adicionar Instrumentos</h2>
 
 					<Input id="inst" type="text" text="Nome do Instrumento:" value="" onChange="" />
-					<Input id="ea" type="text" text="Total de Entradas Analógicas:" value="" onChange="" />
-					<Input id="ed" type="text" text="Total de Entradas Digitais:" value="" onChange="" />
-					<Input id="sa" type="text" text="Total de Saídas Analógicas:" value="" onChange="" />
-					<Input id="sd" type="text" text="Total de Saídas Digitais:" value="" onChange="" />
+					<Input id="ea" type="number" text="Total de Entradas Analógicas:" value="" onChange="" />
+					<Input id="ed" type="number" text="Total de Entradas Digitais:" value="" onChange="" />
+					<Input id="sa" type="number" text="Total de Saídas Analógicas:" value="" onChange="" />
+					<Input id="sd" type="number" text="Total de Saídas Digitais:" value="" onChange="" />
 					<Button id="addInstr" text="Adicionar" action={onClose} />
 				</form>
 				<div id="closeWindow">

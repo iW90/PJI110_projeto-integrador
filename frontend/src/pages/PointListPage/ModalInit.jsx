@@ -20,7 +20,7 @@ function ModalInit({ isVisible, onClose, onNext }) {
 					<h2>Nova Lista de Pontos</h2>
 
 					<Input id="clientName" type="text" text="Nome do Cliente:" value={clientName} onChange={(e) => setClientName(e.target.value)} />
-					<Input id="qtddPvmto" type="text" text="Quantidade de Pavimentos:" value={numberOfFloors} onChange={(e) => setNumberOfFloors(e.target.value)} />
+					<Input id="qtddPvmto" type="number" text="Quantidade de Pavimentos:" value={numberOfFloors} onChange={(e) => setNumberOfFloors(e.target.value)} />
 
 					<Button id="nextButton" text="Próximo" action={handleNext} />
 				</form>

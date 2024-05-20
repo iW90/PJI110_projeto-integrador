@@ -214,7 +214,8 @@ button:focus-visible {
 }
 
 #closeWindow {
-	display: flex;
+	align-self: flex-start;
+	margin-right: -80px;
 }
 
 #closeButton {
