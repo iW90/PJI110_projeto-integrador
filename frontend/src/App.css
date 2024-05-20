@@ -131,3 +131,9 @@ nav ul li:hover {
 	line-height: 24px;
 	margin: 0;
 }
+
+/* Pavement */
+.pavement-content {
+	display: flex;
+	gap: 24px;
+}

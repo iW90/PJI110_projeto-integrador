@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../../components/Form/Button';
 import Input from '../../components/Form/Input';
+import CloseModal from '../../components/Modal/CloseModal';
 
 function ModalInstrument({ isVisible, onClose }) {
 	if (!isVisible) return null;
@@ -18,9 +19,7 @@ function ModalInstrument({ isVisible, onClose }) {
 					<Input id="sd" type="number" text="Total de Saídas Digitais:" value="" onChange="" />
 					<Button id="addInstr" text="Adicionar" action={onClose} />
 				</form>
-				<div id="closeWindow">
-					<Button id="closeButton" text="Fechar" action={onClose} />
-				</div>
+				<CloseModal action={onClose} />
 			</div>
 		</div>
 	);

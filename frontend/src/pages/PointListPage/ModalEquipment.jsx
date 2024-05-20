@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../../components/Form/Button';
 import Input from '../../components/Form/Input';
+import CloseModal from '../../components/Modal/CloseModal';
 
 function ModalEquipment({ isVisible, onClose }) {
 	if (!isVisible) return null;
@@ -14,9 +15,7 @@ function ModalEquipment({ isVisible, onClose }) {
 					<Input id="epto" type="text" text="Nome do Equipamento:" value="" onChange="" />
 					<Button id="addEqpto" text="Adicionar" action={onClose} />
 				</form>
-				<div id="closeWindow">
-					<Button id="closeButton" text="Fechar" action={onClose} />
-				</div>
+				<CloseModal action={onClose} />
 			</div>
 		</div>
 	);

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../../components/Form/Button';
 import Input from '../../components/Form/Input';
+import CloseModal from '../../components/Modal/CloseModal';
 
 function ModalInit({ isVisible, onClose, onNext }) {
 	if (!isVisible) return null;
@@ -24,9 +25,7 @@ function ModalInit({ isVisible, onClose, onNext }) {
 
 					<Button id="nextButton" text="Próximo" action={handleNext} />
 				</form>
-				<div id="closeWindow">
-					<Button id="closeButton" text="Fechar" action={onClose} />
-				</div>
+				<CloseModal action={onClose} />
 			</div>
 		</div>
 	);
