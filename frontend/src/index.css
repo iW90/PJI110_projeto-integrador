@@ -204,4 +204,20 @@ button:focus-visible {
 	padding: 20px;
 	border-radius: 8px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 80%;
+	min-width: 60%;
+	height: 80%;
+	padding: 16px;
+}
+
+#closeWindow {
+	display: flex;
+}
+
+#closeButton {
+	font-size: 8px;
+	background-color: #f66;
 }

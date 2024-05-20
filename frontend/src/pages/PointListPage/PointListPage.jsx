@@ -1,12 +1,49 @@
 import React, { useState } from 'react';
 import Button from '../../components/Form/Button';
-import PointListInit from './PointListInit';
-import PointListFloors from './PointListFloors';
+import ModalInit from './ModalInit';
+import ModalFloors from './ModalFloors';
 
 function PointListPage() {
 	const [isModalInitVisible, setModalInitVisible] = useState(false);
+	const [isModalFloorVisible, setModalFloorVisible] = useState(false);
 	const [numberOfFloors, setNumberOfFloors] = useState(1);
 
+	/* Create Payload to backend */
+	function createPayload(clientName, floors) {
+		const payload = {
+			clientName: clientName,
+			floors: floors.map((floorNumber) => ({
+				floor: floorNumber,
+				disciplines: {
+					HVAC: {
+						equipmentList: [
+							{
+								instrumentList: []
+							}
+						]
+					},
+					Hidraulica: {
+						equipmentList: [
+							{
+								instrumentList: []
+							}
+						]
+					},
+					Eletrica: {
+						equipmentList: [
+							{
+								instrumentList: []
+							}
+						]
+					}
+				}
+			}))
+		};
+	
+		return payload;
+	}
+
+	/* Init Functions */
 	const handleOpenModalInit = () => {
 		setModalInitVisible(true);
 	};
@@ -18,10 +55,17 @@ function PointListPage() {
 	const handleNextModalInit = () => {
 		const client = document.getElementById('clientName').value;
 		const floors = document.getElementById('qtddPvmto').value;
-		setNumberOfFloors(parseInt(floors)); // Converte o número para inteiro e atualiza o estado
+		setNumberOfFloors(parseInt(floors)); // Atualiza o total de pavimentos
 		setModalInitVisible(false);
+		setModalFloorVisible(true);
 	};
 
+	/* Floors Functions */
+	const handleCloseModalFloor = () => {
+		setModalFloorVisible(false);
+	};
+
+	/* Page */
 	return (
 		<section id="pointlist-section">
 			<h2>Lista de Pontos</h2>
@@ -29,9 +73,8 @@ function PointListPage() {
 
 			<Button id="addDevice" text="Iniciar Lista" action={handleOpenModalInit} />
 			
-			<PointListInit isVisible={isModalInitVisible} onClose={handleCloseModalInit} />
-
-			{/* <PointListFloors numberOfFloors={numberOfFloors} /> */}
+			<ModalInit isVisible={isModalInitVisible} onClose={handleCloseModalInit} onNext={handleNextModalInit} />
+			<ModalFloors isVisible={isModalFloorVisible} numberOfFloors={numberOfFloors} onClose={handleCloseModalFloor} />
 		</section>
 	);
 }
