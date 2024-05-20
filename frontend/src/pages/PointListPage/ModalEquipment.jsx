@@ -3,7 +3,7 @@ import FormEquipment from './FormEquipment';
 import Button from '../../components/Form/Button';
 import CloseModal from '../../components/Modal/CloseModal';
 
-function ModalEquipment({ isVisible, onClose }) {
+function ModalEquipment({ isVisible, onClose, addInstr }) {
 	if (!isVisible) return null;
 
 	const [equipmentCount, setEquipmentCount] = useState(1);
@@ -15,16 +15,10 @@ function ModalEquipment({ isVisible, onClose }) {
 	const renderEquipmentForms = () => {
 		const forms = [];
 		for (let i = 0; i < equipmentCount; i++) {
-			forms.push(<FormEquipment key={i} />);
+			forms.push(<FormEquipment key={i} addInstr={addInstr} />);
 		}
 		return forms;
 	};
-
-	const handleAddInstr = (event) => {
-		event.preventDefault();
-		addInstr();
-	};
-
 
 	return (
 		<div className="modal">

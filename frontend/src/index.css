@@ -79,12 +79,14 @@ form {
 	width: 70%;
 	display: flex;
 	flex-direction: column;
-	place-content: center;
+	justify-content: center;
+	align-items: center;
 }
 
 label {
 	display: flex;
-	place-content: center;
+	justify-content: center;
+	align-items: center;
 	gap: 0.5%;
 	width: 90%;
 }
@@ -243,4 +245,8 @@ button:focus-visible {
 .buttonsBlock {
 	display: flex;
 	gap: 16px;
+}
+
+#addInstr {
+	margin-top: -40px;
 }

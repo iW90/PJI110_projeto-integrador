@@ -97,7 +97,7 @@ function PointListPage() {
 			
 			<ModalInit isVisible={isModalInitVisible} onClose={handleCloseModalInit} onNext={handleNextModalInit} />
 			<ModalFloors isVisible={isModalFloorVisible} numberOfFloors={numberOfFloors} onClose={handleCloseModalFloor} addEqpto={handleOpenModalEquipment} />
-			<ModalEquipment isVisible={isModalEquipmentVisible} onClose={handleCloseModalEquipment} />
+			<ModalEquipment isVisible={isModalEquipmentVisible} onClose={handleCloseModalEquipment} addInstr={handleOpenModalInstrument} />
 			<ModalInstrument isVisible={isModalInstrumentVisible} onClose={handleCloseModalInstrument} />
 		</section>
 	);
