@@ -35,7 +35,7 @@ function ManagementPage() {
 
 	return (
 		<section id="management-section">
-			<label htmlFor="managementActions">
+			<label htmlFor="managementActions" className="managementActions">
 				<p>Selecione a ação desejada: </p>
 				<select id="managementActions" name="managementActions" onChange={handleActionChange}>
 					<option value="" disabled selected>Selecione uma opção</option>

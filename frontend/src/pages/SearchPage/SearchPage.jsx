@@ -35,7 +35,7 @@ function SearchPage() {
 
 	return (
 		<section id="search-section">
-			<label htmlFor="managementActions">
+			<label htmlFor="managementActions" className="managementActions">
 				<p>Selecione o tipo de busca desejada: </p>
 				<select id="managementActions" name="managementActions" onChange={handleActionChange}>
 					<option value="" disabled selected>Selecione uma opção</option>

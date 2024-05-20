@@ -102,7 +102,7 @@ label select, select label p {
 	margin: 8px 0;
 }
 
-section label:nth-child(1) {
+.managementActions {
 	margin-bottom: 80px;
 }
 
@@ -245,8 +245,4 @@ button:focus-visible {
 .buttonsBlock {
 	display: flex;
 	gap: 16px;
-}
-
-#addInstr {
-	margin-top: -40px;
 }

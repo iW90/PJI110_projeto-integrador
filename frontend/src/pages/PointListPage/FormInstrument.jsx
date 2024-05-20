@@ -4,7 +4,6 @@ import Input from '../../components/Form/Input';
 function FormInstrument() {
 	return (
 		<form>
-			<p></p>
 			<Input id="it" type="text" text="Nome do Instrumento:" value="" onChange="" />
 			<Input id="ea" type="number" text="Total de Entradas Analógicas:" value="" onChange="" />
 			<Input id="ed" type="number" text="Total de Entradas Digitais:" value="" onChange="" />
