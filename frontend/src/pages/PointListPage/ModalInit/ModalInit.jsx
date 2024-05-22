@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Button from '../../../components/Form/Button';
-import Input from '../../../components/Form/Input';
+import InputV2 from '../../../components/Form/InputV2';
 import ModalCloseButton from '../../../components/Modal/ModalCloseButton';
 
 function ModalInit({ isVisible, onClose, onNext }) {
@@ -14,15 +13,29 @@ function ModalInit({ isVisible, onClose, onNext }) {
 		onNext(clientName, numberOfFloors);
 	};
 
+	const isNextButtonDisabled = !clientName || !numberOfFloors;
+
 	return (
 		<div className="modal">
 			<div className="modal-content">
 				<h2>Nova Lista de Pontos</h2>
 				<form>
-					<Input id="clientName" type="text" text="Nome do Cliente:" value={clientName} onChange={(e) => setClientName(e.target.value)} />
-					<Input id="qtddPvmto" type="number" text="Quantidade de Pavimentos:" value={numberOfFloors} onChange={(e) => setNumberOfFloors(e.target.value)} />
+					<InputV2 
+						id="clientName" 
+						type="text" 
+						text="Nome do Cliente:" 
+						value={clientName} 
+						onChange={(e) => setClientName(e.target.value)} 
+					/>
+					<InputV2 
+						id="qtddPvmto" 
+						type="number" 
+						text="Quantidade de Pavimentos:" 
+						value={numberOfFloors} 
+						onChange={(e) => setNumberOfFloors(e.target.value)} 
+					/>
 
-					<Button id="nextButton" text="Próximo" action={handleNext} />
+					<button id="nextButton" onClick={handleNext} disabled={isNextButtonDisabled}>Próximo</button>
 				</form>
 				<ModalCloseButton action={onClose} />
 			</div>

@@ -11,6 +11,7 @@ function FormEquipment({ addInstr }) {
 	return (
 		<form class="modal-form-equipment">
 			<Input id="epto" type="text" text="Nome do Equipamento:" value="" onChange="" />
+
 			<Button id="addInstr" text="Instrumentos" action={handleAddInstr} />
 		</form>
 	);
