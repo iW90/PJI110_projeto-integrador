@@ -6,18 +6,6 @@ export function nextModalInit(setNumberOfFloors, setModalInitVisible, setModalFl
 	setModalFloorVisible(true);
 }
 
-export function openModalInit(setModalInitVisible) {
-	setModalInitVisible(true);
-}
-
-export function openModalEquipment(setModalEquipmentVisible) {
-	setModalEquipmentVisible(true);
-}
-
-export function openModalInstrument(setModalInstrumentVisible) {
-	setModalInstrumentVisible(true);
-}
-
 export function closeModal(setModalVisible) {
 	setModalVisible(false);
 }
