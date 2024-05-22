@@ -13,7 +13,7 @@ function ModalInit({ isVisible, onClose, onNext }) {
 		onNext(clientName, numberOfFloors);
 	};
 
-	const isNextButtonDisabled = !clientName || !numberOfFloors;
+	const isNextButtonDisabled = !clientName || (numberOfFloors < 1);
 
 	return (
 		<div className="modal">
