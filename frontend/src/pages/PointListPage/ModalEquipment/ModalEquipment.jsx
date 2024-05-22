@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import FormEquipment from './FormEquipment';
-import Button from '../../components/Form/Button';
-import CloseModal from '../../components/Modal/CloseModal';
+import Button from '../../../components/Form/Button';
+import ModalCloseButton from '../../../components/Modal/ModalCloseButton';
 
 function ModalEquipment({ isVisible, onClose, addInstr }) {
 	if (!isVisible) return null;
@@ -29,7 +29,7 @@ function ModalEquipment({ isVisible, onClose, addInstr }) {
 					<Button id="addMoreEqpto" text="+" action={handleAddMoreEqpto} />
 					<Button id="backFloors" text="Voltar" action={onClose} />
 				</div>
-				<CloseModal action={onClose} />
+				<ModalCloseButton action={onClose} />
 			</div>
 		</div>
 	);

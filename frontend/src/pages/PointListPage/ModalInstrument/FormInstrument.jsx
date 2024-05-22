@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../../components/Form/Input';
+import Input from '../../../components/Form/Input';
 
 function FormInstrument() {
 	return (

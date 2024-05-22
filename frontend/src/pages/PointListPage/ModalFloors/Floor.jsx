@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../components/Form/Button';
+import Button from '../../../components/Form/Button';
 
 function Floor({ floorNumber, addEqpto }) {
 	const handleAddEqpto = (event) => {

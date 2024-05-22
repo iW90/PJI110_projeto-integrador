@@ -1,9 +1,9 @@
 import React from 'react';
 
-function CloseModal({ id, text, action }) {
+function ModalCloseButton({ id, text, action }) {
 	return (
 		<button className="closeModal" onClick={action}>Fechar</button>
 	);
 }
 
-export default CloseModal;
+export default ModalCloseButton;

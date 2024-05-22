@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import FormInstrument from './FormInstrument';
-import Button from '../../components/Form/Button';
-import CloseModal from '../../components/Modal/CloseModal';
+import Button from '../../../components/Form/Button';
+import ModalCloseButton from '../../../components/Modal/ModalCloseButton';
 
 function ModalInstrument({ isVisible, onClose }) {
 	if (!isVisible) return null;
@@ -29,7 +29,7 @@ function ModalInstrument({ isVisible, onClose }) {
 					<Button id="addNewInstr" text="+" action={handleAddMoreInstr} />
 					<Button id="backEqptos" text="Voltar" action={onClose} />
 				</div>
-				<CloseModal action={onClose} />
+				<ModalCloseButton action={onClose} />
 			</div>
 		</div>
 	);

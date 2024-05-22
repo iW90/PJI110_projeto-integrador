@@ -1,7 +1,6 @@
 import React from 'react';
 import Floor from './Floor';
-import Button from '../../components/Form/Button';
-import CloseModal from '../../components/Modal/CloseModal';
+import ModalCloseButton from '../../../components/Modal/ModalCloseButton';
 
 function ModalFloors({ isVisible, numberOfFloors, onClose, addEqpto }) {
 	if (!isVisible) return null;
@@ -21,7 +20,7 @@ function ModalFloors({ isVisible, numberOfFloors, onClose, addEqpto }) {
 					<h2>Lista de Pontos Iniciada</h2>
 					{renderFloors()}
 				</form>
-				<CloseModal action={onClose} />
+				<ModalCloseButton action={onClose} />
 			</div>
 		</div>
 	);

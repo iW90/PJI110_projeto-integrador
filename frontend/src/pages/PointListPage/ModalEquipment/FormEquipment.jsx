@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../../components/Form/Button';
-import Input from '../../components/Form/Input';
+import Button from '../../../components/Form/Button';
+import Input from '../../../components/Form/Input';
 
 function FormEquipment({ addInstr }) {
 	const handleAddInstr = (event) => {
