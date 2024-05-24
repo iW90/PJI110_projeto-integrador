@@ -1,5 +1,6 @@
 import React from 'react';
 import Floor from './Floor';
+import Button from '../../../components/Form/Button';
 import ModalCloseButton from '../../../components/Modal/ModalCloseButton';
 
 function ModalFloors({ isVisible, numberOfFloors, onClose, addEqpto }) {
@@ -21,6 +22,7 @@ function ModalFloors({ isVisible, numberOfFloors, onClose, addEqpto }) {
 					{renderFloors()}
 				</form>
 				<ModalCloseButton action={onClose} />
+				<Button id="sendPointList" text="Enviar" action="" />
 			</div>
 		</div>
 	);
