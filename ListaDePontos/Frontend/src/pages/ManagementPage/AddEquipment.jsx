@@ -74,6 +74,13 @@ const AddEquipment = ({ floors }) => {
                 <br /><br />
             </div>
 
+            <div className="equipamento-container">
+                <label>ID</label>
+                <input id="equipamentoId" name="equipamentoId" required />
+                <label>Equipamento</label>
+                <input type="text" name="equipamentoName" required />
+            </div>
+            
             <div className="instrumento-container">
                 <label> </label>
                 <label>ID</label>
