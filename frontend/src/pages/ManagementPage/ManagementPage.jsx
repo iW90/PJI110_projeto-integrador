@@ -1,56 +1,54 @@
 import React, { useState } from 'react';
-import AddInstrument from './AddInstrument';
-import DelInstrument from './DelInstrument';
-import AltInstrument from './AltInstrument';
 import AddEquipment from './AddEquipment';
 import DelEquipment from './DelEquipment';
 import AltEquipment from './AltEquipment';
+import AddFloor from './AddFloor';
 
-// Componente de Conteúdo
-function ManagementContent({ selectedAction }) {
-	switch (selectedAction) {
-		case 'addItmto':
-			return <AddInstrument />;
-		case 'delItmto':
-			return <DelInstrument />;
-		case 'altItmto':
-			return <AltInstrument />;
-		case 'addEqmto':
-			return <AddEquipment />;
-		case 'delEqmto':
-			return <DelEquipment />;
-		case 'altEqmto':
-			return <AltEquipment />;
-		default:
-			return null;
-	}
+function ManagementContent({ selectedAction, floors }) {
+    switch (selectedAction) {
+        case 'addFloor':
+            return <AddFloor />;
+        case 'addEqmto':
+            return <AddEquipment floors={floors} />; // Pass floors as a prop
+        case 'delEqmto':
+            return <DelEquipment />;
+        case 'altEqmto':
+            return <AltEquipment />;
+        default:
+            return null;
+    }
 }
 
-function ManagementPage() {
-	const [selectAction, setSelectAction] = useState('');
+function ManagementPage({ floors }) {
+    const [selectedAction, setSelectedAction] = useState('');
 
-	const handleActionChange = (e) => {
-		setSelectAction(e.target.value);
-	};
+    const handleActionChange = (e) => {
+        setSelectedAction(e.target.value);
+    };
 
-	return (
-		<section id="management-section">
-			<label htmlFor="managementActions" className="managementActions">
-				<p>Selecione a ação desejada: </p>
-				<select id="managementActions" name="managementActions" onChange={handleActionChange}>
-					<option value="" disabled selected>Selecione uma opção</option>
-					<option value="addItmto">Cadastrar Instrumento</option>
-					<option value="delItmto">Excluir Instrumento</option>
-					<option value="altItmto">Alterar Instrumento</option>
-					<option value="addEqmto">Cadastrar Equipamento</option>
-					<option value="delEqmto">Excluir Equipamento</option>
-					<option value="altEqmto">Alterar Equipamento</option>
-				</select>
-			</label>
+    return (
+        <section id="management-section">
+            <label htmlFor="managementActions" className="managementActions">
+                <p>Selecione a ação desejada:</p>
+            </label>
+            <select
+                id="managementActions"
+                name="managementActions"
+                value={selectedAction}
+                onChange={handleActionChange}
+            >
+                <option value="" disabled>
+                    Selecione uma opção
+                </option>
+                <option value="addFloor">Adicionar Pavimento</option>
+                <option value="addEqmto">Cadastrar Equipamento</option>
+                <option value="delEqmto">Excluir Equipamento</option>
+                <option value="altEqmto">Alterar Equipamento</option>
+            </select>
 
-			<ManagementContent selectedAction={selectAction} />
-		</section>
-	);
+            <ManagementContent selectedAction={selectedAction} floors={floors} /> {/* Pass floors as a prop */}
+        </section>
+    );
 }
 
 export default ManagementPage;

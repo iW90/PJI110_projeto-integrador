@@ -1,13 +1,11 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import PageContent from './components/PageContent';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 import './App.css';
 
-//count = variável
-//setCount = função que altera var
-//pesquisar: contextApi / redux
 function App() {
+	const [floors, setFloors] = useState([]); // State for floors
 	const [pagina, setPagina] = useState('home');
 
 	const handleMenuClick = (pagina) => {
@@ -21,6 +19,7 @@ function App() {
 		</header>
 
 		<main>
+			<PageContent floors={floors} setFloors={setFloors} /> {/* Pass floors and setFloors as props */}
 			<PageContent pagina={pagina} />
 		</main>
 
