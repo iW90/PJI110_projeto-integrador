@@ -1,0 +1,369 @@
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, b, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ------------- Footer */
+footer {
+    background-color: rgb(34, 34, 34);
+    padding: 32px;
+    width: 100vw;
+    color: whitesmoke;
+}
+
+footer p:nth-child(1) {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+footer p:nth-child(2) {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 4px 0px;
+}
+
+footer p:nth-child(3) {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* ------------- Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 24px;
+    background-color: var(--color-nav);
+    color: var(--color-light);
+    font-size: 0.8rem;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5%;
+    text-transform: uppercase;
+    list-style-type: none;
+}
+
+nav ul li {
+    min-width: 10%;
+    max-width: 20%;
+}
+
+nav ul li:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ------------- HomePage */
+#home-section {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+#home-section main {
+    flex: 0 0 60%; /* flex-grow: 0, flex-shrink: 0, flex-basis: 75% */
+    max-width: 40%;
+    text-align: justify;
+}
+
+#home-section aside {
+    flex: 0 0 40%; /* flex-grow: 0, flex-shrink: 0, flex-basis: 20% */
+    max-width: 30%;
+    text-align: left;
+}
+
+#home-section aside p {
+    line-height: 24px;
+    margin: 0;
+}
+
+/* ------------- PointList Page */
+
+#dynamicForm {
+    display: block;
+    margin: auto;
+}
+
+.dados {
+    display: grid;
+    grid-template-columns: 150px 200px 150px;
+    grid-template-rows: 30px 50px;
+    margin: auto;
+}
+
+.dados label {
+    grid-row: 1;
+    text-align: center;
+    align-self: center; /* Center vertically */
+}
+
+.dados input,
+.dados select {
+    grid-row: 2;
+    text-align: center;
+    align-self: center; /* Center vertically */
+    margin: 0;
+}
+
+.equipamento-container {
+    display: grid;
+    grid-template-columns: 36px 1fr; /* Set specific sizes for each column */
+    grid-template-rows: 30px 50px; /* Set specific sizes for each row */
+    text-align: center;
+}
+
+.equipamento-container label {
+    grid-row: 1;
+    text-align: center;
+    align-self: center; /* Center vertically */
+}
+
+.equipamento-container input {
+    grid-row: 2;
+    text-align: center;
+    align-self: center;
+    margin: 0;
+}
+
+.instrumento-container {
+    display: grid;
+    grid-template-columns: 36px 36px 1fr 36px 36px 36px 36px 1fr 36px 36px;
+    grid-gap: 1px;
+    text-align: center;
+    align-items: center;
+}
+
+.instrumento-line {
+    display: grid;
+    grid-template-columns: 36px 36px 1fr 36px 36px 36px 36px 1fr 36px 36px;
+    grid-gap: 1px;
+    text-align: center;
+    align-items: center;
+}
+
+#invisibleInput {
+    grid-column: 1;
+}
+
+.instrumento-container input,
+.instrumento-container button,
+.instrumento-line input,
+.instrumento-line button {
+    margin: 0;
+}
+
+.instrumento-line label {
+    grid-row: 1;
+}
+
+.instrumento-line input {
+    grid-row: 2;
+    margin: 0;
+}
+
+.instrumento-container label,
+.instrumento-container input {
+    display: block;
+}
+
+#equipamentoId,
+#instrumentoId,
+#ea,
+#sa,
+#ed,
+#sd,
+#quantidade {
+    width: 35px;
+    text-align: center;
+    grid-row: 2;
+}
+
+#instrumentoId {
+    grid-column: 2;
+}
+
+.add-instrumento {
+    grid-row: 2;
+    grid-column: 1;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.delete-instrumento {
+    grid-row: 2;
+    grid-column: 10;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    color: red;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Add Floor Page */
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 100%;
+}
+
+.addFloorForm {
+    width: 100%;
+    display: grid;
+    grid-row: auto;
+}
+
+.client-container {
+    margin-bottom: 20px;
+}
+
+.client-container input {
+    width: 100%;
+}
+
+.floor-container {
+    margin-bottom: 20px;
+}
+
+.floor-labels {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 36px 36px 1fr 36px;
+}
+
+.blankLabel {
+    grid-column: 1;
+}
+
+.floorIdLabel {
+    grid-column: 2;
+}
+
+.floorNameLabel {
+    grid-column: 3;
+}
+
+.floor-line {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 36px 36px 1fr 36px;
+    align-items: center;
+}
+
+input[name="floorId"] {
+    grid-column: 2;
+}
+
+input[name="floorName"] {
+    grid-column: 3;
+    width: 100%;
+}
+
+.add-floor,
+.delete-floor {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nextButton {
+    display: block;
+    margin: auto;
+}
+
+.add-floor {
+    grid-row: 1;
+    grid-column: 1;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #007bff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.delete-floor {
+    grid-row: 1;
+    grid-column: 4;
+    margin: 1rem;
+    padding: 0;
+    background: none;
+    border: none;
+    color: red;
+    font-size: 24px;
+    cursor: pointer;
+}
+
